@@ -46,7 +46,7 @@ public class Main {
     static void solve_electricity_bill(){
         double kwh_count = 0.0;
         lf("So dien su dung trong thang: "); kwh_count = scan.nextDouble();
-        lf("Tien dien cua thang: %s%n", kwh_count < 50 ? kwh_count * 1000.0 : 500_000 + (kwh_count - 50) * 1200);
+        lf("Tien dien cua thang: %s%n", kwh_count < 50 ? kwh_count * 1000.0 : 50_000 + (kwh_count - 50) * 1200);
     }
 
     static boolean selector(){
