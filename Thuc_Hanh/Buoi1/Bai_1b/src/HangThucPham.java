@@ -1,6 +1,7 @@
 import query_maker.QueryField;
 import query_maker.Queryable;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
@@ -85,7 +86,7 @@ public class HangThucPham extends Queryable {
         long currentUnixTime = new GregorianCalendar().getTime().getTime();
         String prodFormatted = new SimpleDateFormat("dd/MM/yyy").format(prod);
         String expFormatted  = new SimpleDateFormat("dd/MM/yyy").format(exp);
-        String priceFormatted = String.format("%.2fVND", price);
+        String priceFormatted = new DecimalFormat("###,###.00").format(price) + "VND";
         lastQuery = new ArrayList<>();
         lastQuery.add(new QueryField(id, 6));
         lastQuery.add(new QueryField(name, name.length()));
