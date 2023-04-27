@@ -39,7 +39,10 @@ public class QueryMaker {
             String f = fieldsName.get(i);
             int delta = spacings.get(i) - f.length();
             delta = Math.max(1, delta);
-            builder.append(f).append(" ".repeat(delta));
+            if (i == 2)
+                builder.append(" ".repeat(delta)).append(f).append(" ");
+            else
+                builder.append(f).append(" ".repeat(delta));
         }
         builder.append("\n");
         builder.append("-".repeat(totalSpacing)).append("\n");
@@ -50,7 +53,11 @@ public class QueryMaker {
                 String f = field.target().toString();
                 int delta = spacings.get(j) - f.length();
                 delta = Math.max(1, delta);
-                builder.append(f).append(" ".repeat(delta));
+
+                if (j == 2)
+                    builder.append(" ".repeat(delta)).append(f).append(" ");
+                else
+                    builder.append(f).append(" ".repeat(delta));
             }
             builder.append("\n");
         }
