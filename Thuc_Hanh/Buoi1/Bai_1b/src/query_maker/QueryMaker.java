@@ -40,7 +40,7 @@ public class QueryMaker {
             int delta = spacings.get(i) - f.length();
             delta = Math.max(1, delta);
             if (i == 2)
-                builder.append(" ".repeat(delta)).append(f).append(" ");
+                builder.append(" ".repeat(delta)).append(f).append(" ".repeat(3));
             else
                 builder.append(f).append(" ".repeat(delta));
         }
@@ -55,7 +55,7 @@ public class QueryMaker {
                 delta = Math.max(1, delta);
 
                 if (j == 2)
-                    builder.append(" ".repeat(delta)).append(f).append(" ");
+                    builder.append(" ".repeat(delta)).append(f).append(" ".repeat(3));
                 else
                     builder.append(f).append(" ".repeat(delta));
             }

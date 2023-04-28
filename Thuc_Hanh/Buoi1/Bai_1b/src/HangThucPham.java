@@ -55,7 +55,7 @@ public class HangThucPham extends Queryable {
     public void setExp(Date exp) {
         long currentUnixTime = new GregorianCalendar().getTime().getTime();
         // Cong them 1 ngay (86400 * 1000 mili giay);
-        if (exp.getTime() >= prod.getTime() && exp.getTime() < currentUnixTime + (86400 * 1000))
+        if (exp.getTime() >= prod.getTime())
             this.exp = exp;
         else throw new RuntimeException("Faulty date");
     }
