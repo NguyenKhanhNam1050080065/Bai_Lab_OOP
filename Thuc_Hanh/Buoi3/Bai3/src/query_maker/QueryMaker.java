@@ -11,6 +11,9 @@ public class QueryMaker {
         queryable.add(row);
         return this;
     }
+    public int rowCount(){
+        return queryable.size();
+    }
     public QueryMaker addFieldName(String name){
         fieldsName.add(name);
         return this;
@@ -39,10 +42,13 @@ public class QueryMaker {
             String f = fieldsName.get(i);
             int delta = spacings.get(i) - f.length();
             delta = Math.max(1, delta);
-            builder.append(f).append(" ".repeat(delta)).append(i == fieldsName.size() - 1 ? "" : "| ");
+            if (i == 2)
+                builder.append(" ".repeat(delta)).append(f).append(" ".repeat(3));
+            else
+                builder.append(f).append(" ".repeat(delta));
         }
         builder.append("\n");
-//        builder.append("=".repeat(totalSpacing)).append("\n");
+        builder.append("-".repeat(totalSpacing)).append("\n");
         for (Queryable value : queryable) {
             List<QueryField> row = value.query();
             for (int j = 0; j < fieldsName.size(); j++) {
@@ -50,7 +56,11 @@ public class QueryMaker {
                 String f = field.target().toString();
                 int delta = spacings.get(j) - f.length();
                 delta = Math.max(1, delta);
-                builder.append(f).append(" ".repeat(delta)).append(j == fieldsName.size() - 1 ? "" : "| ");
+
+                if (j == 2)
+                    builder.append(" ".repeat(delta)).append(f).append(" ".repeat(3));
+                else
+                    builder.append(f).append(" ".repeat(delta));
             }
             builder.append("\n");
         }
