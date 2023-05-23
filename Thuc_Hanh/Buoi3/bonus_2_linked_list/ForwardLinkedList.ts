@@ -102,9 +102,11 @@ export class ForwardLinkedList<T> {
     }
     public duplicate(){
         const re = new ForwardLinkedList<T>();
-        this.mapNoReturn((_last, curr, _index)=>{
-            re.append(curr.value);
-        })
+        let iter = this.genesis;
+        while (iter !== null) {
+            re.append(iter.value);
+            iter = iter.next;
+        }
         return re;
     }
     public toArray(): T[] {
