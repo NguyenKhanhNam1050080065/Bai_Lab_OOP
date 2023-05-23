@@ -17,6 +17,9 @@ public class DiemHocVien extends Queryable {
         this.name = name;
         this.yearOfBirth = yearOfBirth;
         this.grades = grades;
+        for (double g : grades){
+            total += g;
+        }
     }
 
     public String getName() {

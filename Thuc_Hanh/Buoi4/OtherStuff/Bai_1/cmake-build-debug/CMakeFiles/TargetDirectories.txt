@@ -1,0 +1,3 @@
+D:/doc/homework_frfr/Bai_Lab_OOP/Thuc_Hanh/Buoi4/OtherStuff/Bai_1/cmake-build-debug/CMakeFiles/Bai_1.dir
+D:/doc/homework_frfr/Bai_Lab_OOP/Thuc_Hanh/Buoi4/OtherStuff/Bai_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/doc/homework_frfr/Bai_Lab_OOP/Thuc_Hanh/Buoi4/OtherStuff/Bai_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

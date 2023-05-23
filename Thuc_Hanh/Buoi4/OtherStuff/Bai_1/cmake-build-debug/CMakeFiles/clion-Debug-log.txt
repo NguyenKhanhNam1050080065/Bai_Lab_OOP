@@ -1,0 +1,4 @@
+D:\bin\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/bin/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S D:\doc\homework_frfr\Bai_Lab_OOP\Thuc_Hanh\Buoi4\OtherStuff\Bai_1 -B D:\doc\homework_frfr\Bai_Lab_OOP\Thuc_Hanh\Buoi4\OtherStuff\Bai_1\cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/doc/homework_frfr/Bai_Lab_OOP/Thuc_Hanh/Buoi4/OtherStuff/Bai_1/cmake-build-debug
